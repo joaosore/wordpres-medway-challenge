@@ -1,6 +1,10 @@
 # wordpres-medway-challenge
 
 
+### 0 - Login
+
+<code>ssh -i medway medway@your_server_IP_address</code>
+
 ### 1 - Instalar Apache
 
 O servidor da web Apache é atualmente o servidor da web mais popular do mundo, o que o torna uma ótima opção padrão para hospedar um site.
@@ -25,7 +29,7 @@ Você pode fazer uma verificação pontual imediatamente para verificar se tudo 
 
 Você verá a página da web padrão do CentOS 7 Apache, que existe para fins informativos e de teste. Deve ser parecido com isto:
 
-<img src="https://assets.digitalocean.com/articles/lamp_c7/default_apache.png">
+<img src="https://storage.googleapis.com/imgs.medway.com.br/2020/08/4658d20d-screen-shot-2020-08-17-at-17.40.29.png">
 
 Se você vir esta página, seu servidor da web agora está instalado corretamente.
 
@@ -52,18 +56,23 @@ Agora que nosso banco de dados MySQL está em execução, queremos executar um s
 O prompt pedirá sua senha root atual. Como você acabou de instalar o MySQL, provavelmente não terá um, então deixe em branco pressionando enter. Em seguida, o prompt perguntará se você deseja definir uma senha de root. Vá em frente e entre Ye siga as instruções:
 
 <code>
-  Enter current password for root (enter for none):
-OK, successfully used password, moving on...
+  Enter current password for root (enter for none): <br>
+  OK, successfully used password, moving on...
+</code>
+ 
+<code>
+  Setting the root password ensures that nobody can log into the MariaDB <br />
+  root user without the proper authorization.
+</code>
 
-Setting the root password ensures that nobody can log into the MariaDB
-root user without the proper authorization.
+<code>
+  New password: password <br />
+  Re-enter new password: password <br />
+  Password updated successfully! <br />
+  Reloading privilege tables.. <br />
+   ... Success!
+</code>
 
-New password: password
-Re-enter new password: password
-Password updated successfully!
-Reloading privilege tables..
- ... Success!
- </code>
  
  Para o resto das perguntas, você deve simplesmente pressionar a tecla “ENTER” em cada prompt para aceitar os valores padrão. Isso removerá alguns usuários e bancos de dados de amostra, desabilitará logins de root remotos e carregará essas novas regras para que o MySQL respeite imediatamente as alterações que fizemos.
 
