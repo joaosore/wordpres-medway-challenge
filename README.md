@@ -115,11 +115,11 @@ Zend Engine v3.3.1, Copyright (c) 1998-2018 Zend Technologies
     with Zend OPcache v7.3.1, Copyright (c) 1999-2018, by Zend Technologie
 </code>
 
-### 4 - Faça o download e configurar Wordpress no servidor
+### 4 - Faça o download e configure Wordpress no servidor
 
 <a href="https://br.wordpress.org/download/">Clique aqui</a>
 
-### 5 - Faça o download e instale o template
+### 5 - Faça o download e configure o template
 
 <a href="http://html5blank.com/">Clique aqui</a>
 
