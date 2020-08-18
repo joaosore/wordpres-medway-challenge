@@ -119,7 +119,7 @@ Zend Engine v3.3.1, Copyright (c) 1998-2018 Zend Technologies
 
 <a href="https://br.wordpress.org/download/">Clique aqui</a>
 
-### 5 - Faça o download e configure o template
+### 5 - Faça o download e configure o thema
 
 <a href="http://html5blank.com/">Clique aqui</a>
 
