@@ -1,4 +1,4 @@
-# wordpres-medway-challenge
+# wordpress-medway-challenge
 
 
 ### 0 - Login
