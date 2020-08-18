@@ -29,7 +29,7 @@ Você pode fazer uma verificação pontual imediatamente para verificar se tudo 
 
 Você verá a página da web padrão do CentOS 7 Apache, que existe para fins informativos e de teste. Deve ser parecido com isto:
 
-<img src="https://storage.googleapis.com/imgs.medway.com.br/2020/08/4658d20d-screen-shot-2020-08-17-at-17.40.29.png">
+<img src="https://storage.googleapis.com/imgs.medway.com.br/2020/08/cd91cecc-screen-shot-2020-08-18-at-10.53.31.png">
 
 Se você vir esta página, seu servidor da web agora está instalado corretamente.
 
@@ -84,15 +84,36 @@ Neste ponto, seu sistema de banco de dados está configurado e podemos seguir em
 
 ### 3 - Instalar o PHP
 
-PHP é o componente de nossa configuração que processará o código para exibir conteúdo dinâmico. Ele pode executar scripts, conectar-se aos nossos bancos de dados MySQL para obter informações e entregar o conteúdo processado ao nosso servidor web para exibição.
+O repositório Remi depende do repositório EPEL . Execute os seguintes comandos para ativar os repositórios EPEL e Remi:
 
-Podemos mais uma vez alavancar o yumsistema para instalar nossos componentes. Vamos incluir o pacote php-mysql também:
+<code>sudo yum install epel-release yum-utils</code>
+<code>sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm</code>
 
-<code>sudo yum install php php-mysql</code>
+Yum pode solicitar que você importe a chave GPG do repositório. Digite ye aperte Enter.
 
-Isso deve instalar o PHP sem problemas. Precisamos reiniciar o servidor web Apache para que ele funcione com PHP. Você pode fazer isso digitando:
+Nas seções a seguir, abordaremos como instalar o PHP 7.x habilitando o repositório Remi apropriado. Se você já tem o PHP 5.4 instalado em seu sistema yum, atualize os pacotes PHP.
 
-<code>sudo systemctl restart httpd.service</code>
+Instalando PHP 7.3 no CentOS 7
+PHP 7.3 é a última versão estável do PHP. A maioria dos frameworks e aplicativos PHP modernos, incluindo WordPress , Drupal, Joomla e Laravel, oferecem suporte total ao PHP 7.3.
+
+Execute as etapas abaixo para instalar o PHP 7.3 no CentOS 7.
+
+Comece habilitando o repositório Remi do PHP 7.3:
+<code>sudo yum-config-manager --enable remi-php73</code>
+
+Instale o PHP 7.3 e alguns dos módulos PHP mais comuns:
+<code>sudo yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd</code>
+
+Verifique a instalação do PHP digitando o seguinte comando que imprimirá a versão do PHP :
+
+<code>php -v</code>
+
+<code>
+PHP 7.3.1 (cli) (built: Jan  8 2019 13:55:51) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.3.1, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.3.1, Copyright (c) 1999-2018, by Zend Technologie
+</code>
 
 ### 4 - Abaixe e configurar Wordpress no servidor
 
